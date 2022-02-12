@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{colortbl}
+\usepackage{environ}
+\usepackage{xcolor}
+\usepackage{ninecolors}
+\usepackage{tabularray}
+
+
+
+\usepackage[localise=on]{xepersian}
+\settextfont{XB Yas}
+
+
+\graphicspath{ {./images/} }
+
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\newcommand{\firstpage}[3]{\title{
+		\includegraphics[width=0.4\textwidth]{sharif.png}\\
+		\vspace{0.15cm}
+		\normalsize{دانشکده مهندسی کامپیوتر}
+		\\	\vspace{1cm}
+		\Large{#1}
+		\\ \vspace{.6cm}
+		\huge{#2}
+		\\  \vspace{0.6cm}
+		\Large{#3}
+		\\ \vspace{4cm}
+}
+\author{ارشان دلیلی       ---      98105751}
+\date{\today}
+}
+
+
+\newcommand{\init}[2]{
+	\clearpage
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\clearpage
+	\pagestyle{fancy}
+	\lhead{#1}
+	\rhead{#2}
+	\tableofcontents
+	\newpage
+	\fancyfoot[C]{\thepage}
+}
+
+
+\NewEnviron{image}[3]{
+	\begin{figure}[h]
+		\includegraphics[scale=#1]{#2}
+		\centering
+		\ifnum #3 = 1
+		\caption{\BODY}
+		\fi
+	\end{figure}
+}
+
+%Sample
+%-------------
+%\begin{image}{0.3}{sharif}{1}
+%	این یک نمونه است.
+%\end{image}
+%-------------
+
+
+\NewEnviron{boxed}{
+	\begin{center}
+		\begin{tblr}{
+				hlines = {1.3pt, red},
+				vlines = {1.3pt, red},
+			}
+			\textbf{\BODY}
+		\end{tblr}
+	\end{center}
+}
+
+%Sample
+%-------------
+%	\begin{boxed}
+%	این یک نمونه است.
+%	\end{boxed}
+%-------------
+
+
+\firstpage{درس ۱}{تمرین ۱}{استاد ۱}
+
+
+
+\begin{document}
+	
+	\init{درس ۱}{تمرین ۱}
+	
+\end{document}
