@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{fancyhdr}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{colortbl}
@@ -55,7 +56,7 @@
 
 
 \NewEnviron{image}[3]{
-	\begin{figure}[h]
+	\begin{figure}[H]
 		\includegraphics[scale=#1]{#2}
 		\centering
 		\ifnum #3 = 1
