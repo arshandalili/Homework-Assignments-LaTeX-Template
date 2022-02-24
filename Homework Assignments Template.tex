@@ -40,7 +40,7 @@
 }
 
 
-\newcommand{\init}[2]{
+\newcommand{\init}[3]{
 	\clearpage
 	\maketitle
 	\thispagestyle{empty}
@@ -49,7 +49,9 @@
 	\pagestyle{fancy}
 	\lhead{#1}
 	\rhead{#2}
+	\ifnum #3 = 1
 	\tableofcontents
+	\fi
 	\newpage
 	\fancyfoot[C]{\thepage}
 }
@@ -98,6 +100,6 @@
 
 \begin{document}
 	
-	\init{درس ۱}{تمرین ۱}
+	\init{درس ۱}{تمرین ۱}{1}
 	
 \end{document}
