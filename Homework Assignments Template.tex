@@ -21,6 +21,27 @@
 
 \renewcommand{\footrulewidth}{0.4pt}
 
+\newcommand{\name}{
+ارشان دلیلی
+}
+
+\newcommand{\studentid}{
+98105751
+}
+
+
+\newcommand{\course}{
+	درس
+}
+
+\newcommand{\instructor}{
+	استاد
+}
+
+\newcommand{\hw}{
+	تمرین
+}
+
 
 \newcommand{\firstpage}[3]{
 	\title{
@@ -35,7 +56,7 @@
 		\Large{#3}
 		\\ \vspace{6cm}
 	}
-	\author{ارشان دلیلی       ---      98105751}
+	\author{\name       ---      \studentid}
 	\date{\today}
 }
 
@@ -55,6 +76,8 @@
 	\newpage
 	\fancyfoot[C]{\thepage}
 }
+
+
 
 
 \NewEnviron{image}[3]{
@@ -94,12 +117,12 @@
 %-------------
 
 
-\firstpage{درس ۱}{تمرین ۱}{استاد ۱}
+\firstpage{\course}{\hw}{\instructor}
 
 
 
 \begin{document}
 	
-	\init{درس ۱}{تمرین ۱}{1}
+	\init{\course}{\hw}{1}
 	
 \end{document}
