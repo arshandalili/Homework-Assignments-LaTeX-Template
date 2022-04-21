@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{fancyhdr}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{enumerate}
@@ -98,23 +99,7 @@
 %-------------
 
 
-
-\NewEnviron{eq}{
-	\begin{latin}
-		$ \BODY $
-	\end{latin}
-}
-
-%Sample
-%-------------
-%	\begin{eq}
-	%	ax + by + c = 0
-	%	\end{eq}
-%-------------
-
-
-
-\NewEnviron{boxed}{
+\NewEnviron{boxenv}{
 	\begin{center}
 		\begin{tblr}{
 				hlines = {1.3pt, red},
@@ -127,9 +112,9 @@
 
 %Sample
 %-------------
-%	\begin{boxed}
+%	\begin{boxenv}
 %	این یک نمونه است.
-%	\end{boxed}
+%	\end{boxenv}
 %-------------
 
 
@@ -140,5 +125,6 @@
 \begin{document}
 	
 	\init{\course}{\hw}{1}
+	
 	
 \end{document}
